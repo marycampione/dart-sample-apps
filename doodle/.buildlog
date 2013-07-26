@@ -95,3 +95,46 @@ build.dart --machine --changed=web/doodle.dart.js --changed=web/doodle.dart.js.d
 Total time                                                   -- 566 ms
 build.dart finished [824 ms]
 
+---
+build.dart --machine --changed=web/doodle.css --changed=web/doodle.html
+[{"method":"warning","params":{"file":"web/doodle.html","message":"Expected tag name. Got something else instead","line":6,"charStart":113,"charEnd":115}}]
+[{"method":"warning","params":{"file":"web/doodle.html","message":"Expected tag name. Got something else instead","line":6,"charStart":115,"charEnd":116}}]
+[{"method":"warning","params":{"file":"web/doodle.html","message":"Expected tag name. Got something else instead","line":6,"charStart":116,"charEnd":117}}]
+[{"method":"warning","params":{"file":"web/doodle.html","message":"Expected tag name. Got something else instead","line":6,"charStart":117,"charEnd":118}}]
+[{"method":"warning","params":{"file":"web/doodle.html","message":"Expected tag name. Got something else instead","line":6,"charStart":118,"charEnd":119}}]
+[{"method":"warning","params":{"file":"web/doodle.html","message":"Expected tag name. Got something else instead","line":6,"charStart":119,"charEnd":120}}]
+[{"method":"warning","params":{"file":"web/doodle.html","message":"Expected tag name. Got something else instead","line":6,"charStart":120,"charEnd":121}}]
+[{"method":"warning","params":{"file":"web/doodle.html","message":"Unexpected end tag (head). Ignored.","line":9,"charStart":241,"charEnd":248}}]
+[{"method":"warning","params":{"file":"web/doodle.html","message":"Unexpected end tag (head). Ignored.","line":13,"charStart":344,"charEnd":351}}]
+[{"method":"warning","params":{"file":"web/doodle.html","message":"Unexpected start tag (body).","line":16,"charStart":402,"charEnd":408}}]
+[{"method":"warning","params":{"file":null,"message":"expected } after ruleset for @media","line":115,"charStart":1570,"charEnd":1571}}]
+[{"method":"warning","params":{"file":null,"message":"premature end of file unknown CSS","line":115,"charStart":1570,"charEnd":1571}}]
+Total time spent on web/doodle.html                          -- 272 ms
+[{"method":"generated","params":{"file":"web/out/doodle.dart.map"}}]
+[{"method":"mapping","params":{"from":"web/doodle.html","to":"web/out/doodle.html"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.html"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.html_bootstrap.dart"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.css"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.dart"}}]
+Total time                                                   -- 838 ms
+build.dart finished [1094 ms]
+
+---
+build.dart --machine --changed=web/doodle.html
+[{"method":"warning","params":{"file":null,"message":"expected } after ruleset for @media","line":115,"charStart":1570,"charEnd":1571}}]
+[{"method":"warning","params":{"file":null,"message":"premature end of file unknown CSS","line":115,"charStart":1570,"charEnd":1571}}]
+Total time spent on web/doodle.html                          -- 264 ms
+[{"method":"generated","params":{"file":"web/out/doodle.dart.map"}}]
+[{"method":"mapping","params":{"from":"web/doodle.html","to":"web/out/doodle.html"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.html"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.html_bootstrap.dart"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.css"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.dart"}}]
+Total time                                                   -- 842 ms
+build.dart finished [1097 ms]
+
+---
+build.dart --machine --changed=web/doodle.css
+Total time                                                   -- 579 ms
+build.dart finished [835 ms]
+
