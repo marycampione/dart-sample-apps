@@ -91,7 +91,17 @@ class Doodle {
 
   void begin() {
     window.onResize.listen(setCanvasSize);
-    canvas.onMouseDown.listen((MouseEvent e) {
+    canvas.onMouseDown.listen(mouseClickCallback);
+    canvas.onTouchStart.listen(touchStart);
+    
+   // canvas.onTouchMove.listen(doodle.touchMove);
+   // canvas.onTouchEnd.listen(doodle.touchEnd);
+   // canvas.onTouchCancel.listen(doodle.touchCancel);
+   // canvas.onTouchLeave.listen(doodle.touchCancel);
+    
+  }
+  
+  void mouseClickCallback(MouseEvent e) {
       e.preventDefault();
       e.stopPropagation();
 
@@ -103,7 +113,43 @@ class Doodle {
       draw = true;
       dataModel.paths.add(new PathData(lastX, lastY, nextX, nextY,
           ctx.strokeStyle, ctx.lineWidth, true));
-    });
+  }
+  
+  void touchStart(TouchEvent e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    lastX = nextX = windowToCanvas(e.layer.x);
+    lastY = nextY = windowToCanvas(e.layer.y);
+
+    subscription = canvas.onTouchMove.listen(touchMove);
+    canvas.onTouchEnd.listen(touchEnd);
+    draw = true;
+    dataModel.paths.add(new PathData(lastX, lastY, nextX, nextY,
+        ctx.strokeStyle, ctx.lineWidth, true));
+  }
+  
+  void touchMove(TouchEvent e) {
+    e.preventDefault();
+    e.stopPropagation();
+    nextX = windowToCanvas(e.layer.x);
+    nextY = windowToCanvas(e.layer.y);
+    ctx.lineWidth = thicknessMap[selectedThickness];
+    ctx.strokeStyle = colorsMap[selectedColor];
+
+    dataModel.paths.add(new PathData(lastX, lastY, nextX, nextY,
+        ctx.strokeStyle, ctx.lineWidth));
+  }
+  
+  void touchEnd(TouchEvent e) {
+    e.preventDefault();
+    e.stopPropagation();
+    subscription.cancel();
+    draw = false;
+  }
+  
+  void touchCancel(TouchEvent e) {
+    e.preventDefault();
   }
 
   void mouseMoveCallback(MouseEvent e) {
@@ -165,21 +211,6 @@ class Doodle {
     ctx.closePath();
   }
 
-  touchStart(TouchEvent event) {
-    event.preventDefault();
-  }
-  
-  touchMove(TouchEvent event) {
-    event.preventDefault();
-  }
-  
-  touchEnd(TouchEvent event) {
-    event.preventDefault();
-  }
-  
-  void touchCancel(TouchEvent event) {
-    event.preventDefault();
-  }
 }
 
 class DataModel {
@@ -202,12 +233,6 @@ void main() {
   CanvasElement canvas = query('canvas');
   
   var doodle = new Doodle(canvas);
-  
-  canvas.onTouchStart.listen(doodle.touchStart);
-  canvas.onTouchMove.listen(doodle.touchMove);
-  canvas.onTouchEnd.listen(doodle.touchEnd);
-  canvas.onTouchCancel.listen(doodle.touchCancel);
-  canvas.onTouchLeave.listen(doodle.touchCancel);
   
   doodle.begin();
   query('#undo-last-doodle').onClick.listen((event) {

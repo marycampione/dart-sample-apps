@@ -157,3 +157,123 @@ build.dart --machine --changed=pubspec.lock
 Total time                                                   -- 722 ms
 build.dart finished [982 ms]
 
+---
+build.dart --machine --changed=web/doodle.dart
+Total time spent on web/doodle.html                          -- 278 ms
+[{"method":"generated","params":{"file":"web/out/doodle.dart.map"}}]
+[{"method":"mapping","params":{"from":"web/doodle.html","to":"web/out/doodle.html"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.html"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.html_bootstrap.dart"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.css"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.dart"}}]
+Total time                                                   -- 889 ms
+build.dart finished [1178 ms]
+
+---
+build.dart --machine --changed=web/doodle.dart
+Total time spent on web/doodle.html                          -- 275 ms
+[{"method":"generated","params":{"file":"web/out/doodle.dart.map"}}]
+[{"method":"mapping","params":{"from":"web/doodle.html","to":"web/out/doodle.html"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.html"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.html_bootstrap.dart"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.css"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.dart"}}]
+Total time                                                   -- 888 ms
+build.dart finished [1188 ms]
+
+---
+build.dart --machine --changed=web/doodle.dart
+Total time spent on web/doodle.html                          -- 271 ms
+[{"method":"generated","params":{"file":"web/out/doodle.dart.map"}}]
+[{"method":"mapping","params":{"from":"web/doodle.html","to":"web/out/doodle.html"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.html"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.html_bootstrap.dart"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.css"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.dart"}}]
+Total time                                                   -- 870 ms
+build.dart finished [1142 ms]
+
+---
+build.dart --machine --changed=web/doodle.dart
+Total time spent on web/doodle.html                          -- 292 ms
+[{"method":"generated","params":{"file":"web/out/doodle.dart.map"}}]
+[{"method":"mapping","params":{"from":"web/doodle.html","to":"web/out/doodle.html"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.html"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.html_bootstrap.dart"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.css"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.dart"}}]
+Total time                                                   -- 882 ms
+build.dart finished [1156 ms]
+
+---
+build.dart --machine --changed=web/doodle.dart
+Total time spent on web/doodle.html                          -- 271 ms
+[{"method":"generated","params":{"file":"web/out/doodle.dart.map"}}]
+[{"method":"mapping","params":{"from":"web/doodle.html","to":"web/out/doodle.html"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.html"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.html_bootstrap.dart"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.css"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.dart"}}]
+Total time                                                   -- 874 ms
+build.dart finished [1140 ms]
+
+---
+build.dart --machine --changed=web/doodle.dart
+Total time spent on web/doodle.html                          -- 302 ms
+[{"method":"generated","params":{"file":"web/out/doodle.dart.map"}}]
+[{"method":"mapping","params":{"from":"web/doodle.html","to":"web/out/doodle.html"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.html"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.html_bootstrap.dart"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.css"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.dart"}}]
+Total time                                                   -- 961 ms
+build.dart finished [1245 ms]
+
+---
+build.dart --machine --changed=web/doodle.dart
+Total time spent on web/doodle.html                          -- 278 ms
+[{"method":"generated","params":{"file":"web/out/doodle.dart.map"}}]
+[{"method":"mapping","params":{"from":"web/doodle.html","to":"web/out/doodle.html"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.html"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.html_bootstrap.dart"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.css"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.dart"}}]
+Total time                                                   -- 884 ms
+build.dart finished [1153 ms]
+
+---
+build.dart --machine --changed=web/doodle.dart
+Total time spent on web/doodle.html                          -- 279 ms
+[{"method":"generated","params":{"file":"web/out/doodle.dart.map"}}]
+[{"method":"mapping","params":{"from":"web/doodle.html","to":"web/out/doodle.html"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.html"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.html_bootstrap.dart"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.css"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.dart"}}]
+Total time                                                   -- 896 ms
+build.dart finished [1182 ms]
+
+---
+build.dart --machine --changed=web/doodle.dart
+Total time spent on web/doodle.html                          -- 269 ms
+[{"method":"generated","params":{"file":"web/out/doodle.dart.map"}}]
+[{"method":"mapping","params":{"from":"web/doodle.html","to":"web/out/doodle.html"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.html"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.html_bootstrap.dart"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.css"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.dart"}}]
+Total time                                                   -- 866 ms
+build.dart finished [1144 ms]
+
+---
+build.dart --machine --changed=web/doodle.dart
+Total time spent on web/doodle.html                          -- 313 ms
+[{"method":"generated","params":{"file":"web/out/doodle.dart.map"}}]
+[{"method":"mapping","params":{"from":"web/doodle.html","to":"web/out/doodle.html"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.html"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.html_bootstrap.dart"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.css"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.dart"}}]
+Total time                                                   -- 952 ms
+build.dart finished [1243 ms]
+
