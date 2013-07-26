@@ -4,7 +4,7 @@ import 'package:web_ui/web_ui.dart';
 import 'dart:collection';
 
 @observable
-String selectedThickness = 'Medium';
+String selectedThickness = 'Thin';
 LinkedHashMap<String, int> thicknessMap = {'Super-thin' : 3,
                                            'Thin' : 6,
                                            'Medium': 12,
@@ -12,10 +12,11 @@ LinkedHashMap<String, int> thicknessMap = {'Super-thin' : 3,
                                            'Super-thick': 48};
 
 @observable
-String selectedColor = 'yellow';
-LinkedHashMap<String, int> colorsMap = {'red'    : 'rgb(180,30, 20)',
-                                        'green'  : 'rgb(30,180,20)',
-                                        'yellow' : 'rgb(250,250,125)'};
+String selectedColor = 'blue';
+LinkedHashMap<String, int> colorsMap = {'red'    : 'rgb(180, 30, 20)',
+                                        'green'  : 'rgb(30, 180, 20)',
+                                        'blue'   : 'rgb(30,  20, 180)',
+                                        'yellow' : 'rgb(250,250, 125)'};
 class Doodle {
   CanvasElement canvas;
   CanvasRenderingContext2D ctx;
@@ -47,19 +48,13 @@ class Doodle {
 
   void setCanvasSize([Event e]) {
     canvas.width = document.body.offsetWidth;
-    canvas.height = (document.body.offsetHeight * .7).toInt();
+    canvas.height = (document.body.offsetHeight * .85).toInt();
   }
 
   void begin() {
     window.onResize.listen(setCanvasSize);
     canvas.onMouseDown.listen(mouseClickCallback);
     canvas.onTouchStart.listen(touchStart);
-    
-   // canvas.onTouchMove.listen(doodle.touchMove);
-   // canvas.onTouchEnd.listen(doodle.touchEnd);
-   // canvas.onTouchCancel.listen(doodle.touchCancel);
-   // canvas.onTouchLeave.listen(doodle.touchCancel);
-    
   }
   
   void mouseClickCallback(MouseEvent e) {
@@ -90,29 +85,6 @@ class Doodle {
         ctx.strokeStyle, ctx.lineWidth, true));
   }
   
-  void touchMove(TouchEvent e) {
-    e.preventDefault();
-    e.stopPropagation();
-    nextX = windowToCanvas(e.layer.x);
-    nextY = windowToCanvas(e.layer.y);
-    ctx.lineWidth = thicknessMap[selectedThickness];
-    ctx.strokeStyle = colorsMap[selectedColor];
-
-    dataModel.paths.add(new PathData(lastX, lastY, nextX, nextY,
-        ctx.strokeStyle, ctx.lineWidth));
-  }
-  
-  void touchEnd(TouchEvent e) {
-    e.preventDefault();
-    e.stopPropagation();
-    subscription.cancel();
-    draw = false;
-  }
-  
-  void touchCancel(TouchEvent e) {
-    e.preventDefault();
-  }
-
   void mouseMoveCallback(MouseEvent e) {
     e.preventDefault();
     e.stopPropagation();
@@ -125,6 +97,18 @@ class Doodle {
         ctx.strokeStyle, ctx.lineWidth));
   }
 
+  void touchMove(TouchEvent e) {
+    e.preventDefault();
+    e.stopPropagation();
+    nextX = windowToCanvas(e.layer.x);
+    nextY = windowToCanvas(e.layer.y);
+    ctx.lineWidth = thicknessMap[selectedThickness];
+    ctx.strokeStyle = colorsMap[selectedColor];
+
+    dataModel.paths.add(new PathData(lastX, lastY, nextX, nextY,
+        ctx.strokeStyle, ctx.lineWidth));
+  }
+  
   void mouseUpCallback(MouseEvent e) {
     e.preventDefault();
     e.stopPropagation();
@@ -132,6 +116,13 @@ class Doodle {
     draw = false;
   }
 
+  void touchEnd(TouchEvent e) {
+    e.preventDefault();
+    e.stopPropagation();
+    subscription.cancel();
+    draw = false;
+  }
+  
   clearCanvas() {
     ctx.fillStyle = '#333';
     ctx.fillRect(0, 0, canvas.width, canvas.height);

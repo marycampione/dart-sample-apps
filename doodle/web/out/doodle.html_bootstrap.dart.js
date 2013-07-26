@@ -10402,7 +10402,7 @@ Doodle: {"": "Object;canvas,ctx,lastX<,lastY<,nextX<,nextY<,draw,subscription,da
     t3 = document.body.offsetHeight;
     if (t3 == null)
       throw t3.$mul();
-    t2.set$height(t1, $.JSNumber_methods.toInt$0(t3 * 0.7));
+    t2.set$height(t1, $.JSNumber_methods.toInt$0(t3 * 0.85));
   },
   setCanvasSize$0: function() {
     return this.setCanvasSize$1(null);
@@ -10524,41 +10524,6 @@ Doodle: {"": "Object;canvas,ctx,lastX<,lastY<,nextX<,nextY<,draw,subscription,da
   get$touchStart: function() {
     return new $.BoundClosure$1(this, "touchStart$1", null);
   },
-  touchMove$1: function(e) {
-    var t1, t2, t3, t4, t5, t6, t7;
-    t1 = $.getInterceptor$x(e);
-    t1.preventDefault$0(e);
-    t1.stopPropagation$0(e);
-    this.nextX = this.windowToCanvas$1(t1.get$layer(e).x);
-    this.nextY = this.windowToCanvas$1(t1.get$layer(e).y);
-    t1 = this.ctx;
-    t2 = $.get$thicknessMap();
-    $.set$lineWidth$x(t1, t2.$index(t2, $.selectedThickness()));
-    t2 = this.ctx;
-    t1 = $.get$colorsMap();
-    $.set$strokeStyle$x(t2, t1.$index(t1, $.selectedColor()));
-    t1 = this.dataModel.paths;
-    t2 = this.lastX;
-    t3 = this.lastY;
-    t4 = this.nextX;
-    t5 = this.nextY;
-    t6 = this.ctx;
-    t7 = $.getInterceptor$x(t6);
-    $.add$1$ax(t1, new $.PathData(t2, t3, t4, t5, t7.get$strokeStyle(t6), t7.get$lineWidth(t6), false));
-  },
-  get$touchMove: function() {
-    return new $.BoundClosure$1(this, "touchMove$1", null);
-  },
-  touchEnd$1: function(e) {
-    var t1 = $.getInterceptor$x(e);
-    t1.preventDefault$0(e);
-    t1.stopPropagation$0(e);
-    this.subscription.cancel$0();
-    this.draw = false;
-  },
-  get$touchEnd: function() {
-    return new $.BoundClosure$1(this, "touchEnd$1", null);
-  },
   mouseMoveCallback$1: function(e) {
     var t1, t2, t3, t4, t5, t6, t7;
     t1 = $.getInterceptor$x(e);
@@ -10586,6 +10551,31 @@ Doodle: {"": "Object;canvas,ctx,lastX<,lastY<,nextX<,nextY<,draw,subscription,da
   get$mouseMoveCallback: function() {
     return new $.BoundClosure$1(this, "mouseMoveCallback$1", null);
   },
+  touchMove$1: function(e) {
+    var t1, t2, t3, t4, t5, t6, t7;
+    t1 = $.getInterceptor$x(e);
+    t1.preventDefault$0(e);
+    t1.stopPropagation$0(e);
+    this.nextX = this.windowToCanvas$1(t1.get$layer(e).x);
+    this.nextY = this.windowToCanvas$1(t1.get$layer(e).y);
+    t1 = this.ctx;
+    t2 = $.get$thicknessMap();
+    $.set$lineWidth$x(t1, t2.$index(t2, $.selectedThickness()));
+    t2 = this.ctx;
+    t1 = $.get$colorsMap();
+    $.set$strokeStyle$x(t2, t1.$index(t1, $.selectedColor()));
+    t1 = this.dataModel.paths;
+    t2 = this.lastX;
+    t3 = this.lastY;
+    t4 = this.nextX;
+    t5 = this.nextY;
+    t6 = this.ctx;
+    t7 = $.getInterceptor$x(t6);
+    $.add$1$ax(t1, new $.PathData(t2, t3, t4, t5, t7.get$strokeStyle(t6), t7.get$lineWidth(t6), false));
+  },
+  get$touchMove: function() {
+    return new $.BoundClosure$1(this, "touchMove$1", null);
+  },
   mouseUpCallback$1: function(e) {
     var t1 = $.getInterceptor$x(e);
     t1.preventDefault$0(e);
@@ -10595,6 +10585,16 @@ Doodle: {"": "Object;canvas,ctx,lastX<,lastY<,nextX<,nextY<,draw,subscription,da
   },
   get$mouseUpCallback: function() {
     return new $.BoundClosure$1(this, "mouseUpCallback$1", null);
+  },
+  touchEnd$1: function(e) {
+    var t1 = $.getInterceptor$x(e);
+    t1.preventDefault$0(e);
+    t1.stopPropagation$0(e);
+    this.subscription.cancel$0();
+    this.draw = false;
+  },
+  get$touchEnd: function() {
+    return new $.BoundClosure$1(this, "touchEnd$1", null);
   },
   clearCanvas$0: function() {
     var t1, t2;
@@ -12665,8 +12665,8 @@ $.interceptorsByTag = null;
 $.leafTags = null;
 $._callbacksAreEnqueued = false;
 $.Expando__keyCount = 0;
-$.__$selectedThickness = "Medium";
-$.__$selectedColor = "yellow";
+$.__$selectedThickness = "Thin";
+$.__$selectedColor = "blue";
 $.Device__isOpera = null;
 $.Device__isIE = null;
 $.Device__isWebKit = null;
@@ -12999,7 +12999,7 @@ Isolate.$lazy($, "thicknessMap", "thicknessMap", "get$thicknessMap", function() 
   return $.makeLiteralMap(["Super-thin", 3, "Thin", 6, "Medium", 12, "Thick", 24, "Super-thick", 48]);
 });
 Isolate.$lazy($, "colorsMap", "colorsMap", "get$colorsMap", function() {
-  return $.makeLiteralMap(["red", "rgb(180,30, 20)", "green", "rgb(30,180,20)", "yellow", "rgb(250,250,125)"]);
+  return $.makeLiteralMap(["red", "rgb(180, 30, 20)", "green", "rgb(30, 180, 20)", "blue", "rgb(30,  20, 180)", "yellow", "rgb(250,250, 125)"]);
 });
 Isolate.$lazy($, "readCurrentStackTrace", "readCurrentStackTrace", "get$readCurrentStackTrace", function() {
   return new $.closure();

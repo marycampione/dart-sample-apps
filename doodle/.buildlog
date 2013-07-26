@@ -277,3 +277,281 @@ Total time spent on web/doodle.html                          -- 313 ms
 Total time                                                   -- 952 ms
 build.dart finished [1243 ms]
 
+---
+build.dart --machine --changed=web/doodle.dart
+Total time spent on web/doodle.html                          -- 280 ms
+[{"method":"generated","params":{"file":"web/out/doodle.dart.map"}}]
+[{"method":"mapping","params":{"from":"web/doodle.html","to":"web/out/doodle.html"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.html"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.html_bootstrap.dart"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.css"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.dart"}}]
+Total time                                                   -- 863 ms
+build.dart finished [1201 ms]
+
+---
+build.dart --machine --changed=web/doodle.dart
+Total time spent on web/doodle.html                          -- 269 ms
+[{"method":"generated","params":{"file":"web/out/doodle.dart.map"}}]
+[{"method":"mapping","params":{"from":"web/doodle.html","to":"web/out/doodle.html"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.html"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.html_bootstrap.dart"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.css"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.dart"}}]
+Total time                                                   -- 878 ms
+build.dart finished [1149 ms]
+
+---
+build.dart --machine --removed=pubspec.lock
+Unable to open file: /Users/mcampione/Documents/shailenexamples/dart-sample-apps/doodle/packages/web_ui/component_build.dart'file:///Users/mcampione/Documents/shailenexamples/dart-sample-apps/doodle/build.dart': Error: line 1 pos 1: library handler failed
+import 'package:web_ui/component_build.dart';
+^
+build.dart finished [73 ms]
+
+---
+build.dart --machine --changed=pubspec.lock
+Total time                                                   -- 816 ms
+build.dart finished [1123 ms]
+
+---
+build.dart --machine --clean
+Total time                                                   --  26 ms
+build.dart finished [395 ms]
+
+---
+build.dart --machine --full
+Total time spent on web/doodle.html                          -- 393 ms
+[{"method":"generated","params":{"file":"web/out/doodle.dart.map"}}]
+[{"method":"mapping","params":{"from":"web/doodle.html","to":"web/out/doodle.html"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.html"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.html_bootstrap.dart"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.css"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.dart"}}]
+Total time                                                   -- 1243 ms
+build.dart finished [1563 ms]
+
+---
+build.dart --machine --changed=web/doodle.css
+Total time                                                   -- 647 ms
+build.dart finished [933 ms]
+
+---
+build.dart --machine --changed=web/doodle.css
+Total time                                                   -- 662 ms
+build.dart finished [945 ms]
+
+---
+build.dart --machine --changed=web/doodle.css
+Total time                                                   -- 647 ms
+build.dart finished [970 ms]
+
+---
+build.dart --machine --changed=web/doodle.css
+Total time                                                   -- 626 ms
+build.dart finished [912 ms]
+
+---
+build.dart --machine --changed=web/doodle.css
+Total time                                                   -- 637 ms
+build.dart finished [916 ms]
+
+---
+build.dart --machine --changed=web/doodle.css
+Total time                                                   -- 636 ms
+build.dart finished [912 ms]
+
+---
+build.dart --machine --changed=web/doodle.css
+Total time                                                   -- 638 ms
+build.dart finished [916 ms]
+
+---
+build.dart --machine --changed=web/doodle.css
+Total time                                                   -- 624 ms
+build.dart finished [904 ms]
+
+---
+build.dart --machine --changed=web/doodle.css
+Total time                                                   -- 648 ms
+build.dart finished [924 ms]
+
+---
+build.dart --machine --changed=web/doodle.css
+Total time                                                   -- 636 ms
+build.dart finished [919 ms]
+
+---
+build.dart --machine --changed=web/doodle.css
+Total time                                                   -- 632 ms
+build.dart finished [915 ms]
+
+---
+build.dart --machine --changed=web/doodle.css
+Total time                                                   -- 640 ms
+build.dart finished [909 ms]
+
+---
+build.dart --machine --changed=web/doodle.css
+Total time                                                   -- 631 ms
+build.dart finished [909 ms]
+
+---
+build.dart --machine --changed=web/doodle.css
+Total time                                                   -- 622 ms
+build.dart finished [902 ms]
+
+---
+build.dart --machine --changed=web/doodle.css
+Total time                                                   -- 645 ms
+build.dart finished [918 ms]
+
+---
+build.dart --machine --changed=web/doodle.css
+Total time                                                   -- 624 ms
+build.dart finished [904 ms]
+
+---
+build.dart --machine --changed=web/doodle.css
+Total time                                                   -- 614 ms
+build.dart finished [891 ms]
+
+---
+build.dart --machine --changed=web/doodle.css
+Total time                                                   -- 633 ms
+build.dart finished [901 ms]
+
+---
+build.dart --machine --changed=web/doodle.css
+Total time                                                   -- 619 ms
+build.dart finished [893 ms]
+
+---
+build.dart --machine --changed=web/doodle.css
+Total time                                                   -- 625 ms
+build.dart finished [894 ms]
+
+---
+build.dart --machine --changed=web/doodle.css
+Total time                                                   -- 628 ms
+build.dart finished [915 ms]
+
+---
+build.dart --machine --changed=web/doodle.css
+Total time                                                   -- 619 ms
+build.dart finished [904 ms]
+
+---
+build.dart --machine --changed=web/doodle.css
+Total time                                                   -- 618 ms
+build.dart finished [902 ms]
+
+---
+build.dart --machine --changed=web/doodle.css
+Total time                                                   -- 624 ms
+build.dart finished [906 ms]
+
+---
+build.dart --machine --changed=web/doodle.css
+Total time                                                   -- 629 ms
+build.dart finished [898 ms]
+
+---
+build.dart --machine --changed=web/doodle.css
+Total time                                                   -- 615 ms
+build.dart finished [893 ms]
+
+---
+build.dart --machine --changed=web/doodle.css
+Total time                                                   -- 625 ms
+build.dart finished [911 ms]
+
+---
+build.dart --machine --changed=web/doodle.css
+Total time                                                   -- 615 ms
+build.dart finished [884 ms]
+
+---
+build.dart --machine --changed=web/doodle.css
+Total time                                                   -- 619 ms
+build.dart finished [902 ms]
+
+---
+build.dart --machine --changed=web/doodle.css
+Total time                                                   -- 611 ms
+build.dart finished [889 ms]
+
+---
+build.dart --machine --changed=web/doodle.css
+Total time                                                   -- 624 ms
+build.dart finished [911 ms]
+
+---
+build.dart --machine --changed=web/doodle.css
+Total time                                                   -- 631 ms
+build.dart finished [908 ms]
+
+---
+build.dart --machine --changed=web/doodle.css
+Total time                                                   -- 623 ms
+build.dart finished [909 ms]
+
+---
+build.dart --machine --changed=web/doodle.dart
+Total time spent on web/doodle.html                          -- 315 ms
+[{"method":"generated","params":{"file":"web/out/doodle.dart.map"}}]
+[{"method":"mapping","params":{"from":"web/doodle.html","to":"web/out/doodle.html"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.html"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.html_bootstrap.dart"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.css"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.dart"}}]
+Total time                                                   -- 935 ms
+build.dart finished [1231 ms]
+
+---
+build.dart --machine --changed=web/doodle.dart
+Total time spent on web/doodle.html                          -- 312 ms
+[{"method":"generated","params":{"file":"web/out/doodle.dart.map"}}]
+[{"method":"mapping","params":{"from":"web/doodle.html","to":"web/out/doodle.html"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.html"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.html_bootstrap.dart"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.css"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.dart"}}]
+Total time                                                   -- 955 ms
+build.dart finished [1256 ms]
+
+---
+build.dart --machine --changed=web/doodle.dart
+Total time spent on web/doodle.html                          -- 317 ms
+[{"method":"generated","params":{"file":"web/out/doodle.dart.map"}}]
+[{"method":"mapping","params":{"from":"web/doodle.html","to":"web/out/doodle.html"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.html"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.html_bootstrap.dart"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.css"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.dart"}}]
+Total time                                                   -- 960 ms
+build.dart finished [1251 ms]
+
+---
+build.dart --machine --changed=web/doodle.dart
+Total time spent on web/doodle.html                          -- 299 ms
+[{"method":"generated","params":{"file":"web/out/doodle.dart.map"}}]
+[{"method":"mapping","params":{"from":"web/doodle.html","to":"web/out/doodle.html"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.html"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.html_bootstrap.dart"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.css"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.dart"}}]
+Total time                                                   -- 943 ms
+build.dart finished [1231 ms]
+
+---
+build.dart --machine --changed=web/doodle.dart
+Total time spent on web/doodle.html                          -- 301 ms
+[{"method":"generated","params":{"file":"web/out/doodle.dart.map"}}]
+[{"method":"mapping","params":{"from":"web/doodle.html","to":"web/out/doodle.html"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.html"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.html_bootstrap.dart"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.css"}}]
+[{"method":"generated","params":{"file":"web/out/doodle.dart"}}]
+Total time                                                   -- 949 ms
+build.dart finished [1245 ms]
+
