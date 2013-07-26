@@ -138,3 +138,22 @@ build.dart --machine --changed=web/doodle.css
 Total time                                                   -- 579 ms
 build.dart finished [835 ms]
 
+---
+build.dart --machine --removed=pubspec.lock
+Unable to open file: /Users/mcampione/Documents/shailenexamples/dart-sample-apps/doodle/packages/web_ui/component_build.dart'file:///Users/mcampione/Documents/shailenexamples/dart-sample-apps/doodle/build.dart': Error: line 1 pos 1: library handler failed
+import 'package:web_ui/component_build.dart';
+^
+build.dart finished [58 ms]
+
+---
+build.dart --machine --removed=web/doodle.dart.js --removed=web/doodle.dart.js.deps --removed=web/doodle.dart.j...
+Unable to open file: /Users/mcampione/Documents/shailenexamples/dart-sample-apps/doodle/packages/web_ui/component_build.dart'file:///Users/mcampione/Documents/shailenexamples/dart-sample-apps/doodle/build.dart': Error: line 1 pos 1: library handler failed
+import 'package:web_ui/component_build.dart';
+^
+build.dart finished [55 ms]
+
+---
+build.dart --machine --changed=pubspec.lock
+Total time                                                   -- 722 ms
+build.dart finished [982 ms]
+
