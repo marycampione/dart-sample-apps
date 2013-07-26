@@ -125,6 +125,22 @@ class Doodle {
     ctx.stroke();
     ctx.closePath();
   }
+
+  touchStart(TouchEvent event) {
+    event.preventDefault();
+  }
+  
+  touchMove(TouchEvent event) {
+    event.preventDefault();
+  }
+  
+  touchEnd(TouchEvent event) {
+    event.preventDefault();
+  }
+  
+  void touchCancel(TouchEvent event) {
+    event.preventDefault();
+  }
 }
 
 class DataModel {
@@ -144,7 +160,16 @@ class PathData {
 }
 
 void main() {
-  var doodle = new Doodle(query('canvas'));
+  CanvasElement canvas = query('canvas');
+  
+  var doodle = new Doodle(canvas);
+  
+  canvas.onTouchStart.listen(doodle.touchStart);
+  canvas.onTouchMove.listen(doodle.touchMove);
+  canvas.onTouchEnd.listen(doodle.touchEnd);
+  canvas.onTouchCancel.listen(doodle.touchCancel);
+  canvas.onTouchLeave.listen(doodle.touchCancel);
+  
   doodle.begin();
   query('#undo-last-doodle').onClick.listen((event) {
     event.preventDefault();
