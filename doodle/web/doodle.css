@@ -21,7 +21,7 @@ body {
 }
 
 #canvas {
-  background-color: #333;
+  background-color: #FFF;
 }
 
 #controls-container {
@@ -29,7 +29,7 @@ body {
   height: 2em;
   margin: 0;
   padding: 0;
-  text-align: center;
+  text-align: left;
 }
 
 /* larger display */
