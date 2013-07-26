@@ -51,3 +51,13 @@ build.dart --machine --changed=pubspec.lock
 Total time                                                   -- 677 ms
 build.dart finished [963 ms]
 
+---
+build.dart --machine --changed=web/dart.js
+Total time                                                   -- 586 ms
+build.dart finished [838 ms]
+
+---
+build.dart --machine --removed=web/dart.js
+Total time                                                   -- 591 ms
+build.dart finished [845 ms]
+
